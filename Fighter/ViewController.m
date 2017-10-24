@@ -82,14 +82,12 @@
 }
 -(void)startTouch{
     GameScene *geameScene = [[GameScene alloc] initWithSize:self.view.frame.size];
-    [self.skView presentScene:geameScene transition:[SKTransition doorsCloseHorizontalWithDuration:1]];
+    [self.skView presentScene:geameScene transition:[SKTransition doorsOpenHorizontalWithDuration:1]];
     [UIView animateWithDuration:1 animations:^{
         self.btnStar.alpha = 0;
         self.logoImage.alpha = 0;
-    } completion:^(BOOL finished) {
         self.btnPause.alpha = 1;
-        _btnStop.alpha = 1.0;
-
+        self.btnStop.alpha = 1.0;
     }];
 }
 -(UIButton *)btnPause{
@@ -114,7 +112,6 @@
         [_btnStop addTarget:self action:@selector(stopTouch) forControlEvents:UIControlEventTouchUpInside];
         _btnStop.titleLabel.font = [UIFont boldSystemFontOfSize:20];
         _btnStop.frame = CGRectMake(10, 20, 30, 30);
-//        _btnStop.center = CGPointMake(WIDTH/2, HIGHT/2 + 200);
     }
     return _btnStop;
 }
@@ -138,10 +135,8 @@
         
         self.btnPause.alpha = 0.0;
         self.btnStop.alpha = 0.0;
-    } completion:^(BOOL finished) {
         self.btnStar.alpha = 1.0;
         self.logoImage.alpha = 1.0;
-        
     }];
 }
 - (void)didReceiveMemoryWarning {

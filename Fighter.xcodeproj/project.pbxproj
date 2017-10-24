@@ -11,6 +11,7 @@
 		832FA9A31F9EF7700049A5FD /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A11F9EF7650049A5FD /* pause.png */; };
 		832FA9A41F9EF7700049A5FD /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A21F9EF7650049A5FD /* start.png */; };
 		832FA9A61F9EFB0F0049A5FD /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A51F9EFB080049A5FD /* stop.png */; };
+		832FA9A91F9F18340049A5FD /* HeroFIghter.m in Sources */ = {isa = PBXBuildFile; fileRef = 832FA9A81F9F18340049A5FD /* HeroFIghter.m */; };
 		8383EDB01F9D8CA5006BCC57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDAF1F9D8CA5006BCC57 /* AppDelegate.m */; };
 		8383EDB31F9D8CA5006BCC57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDB21F9D8CA5006BCC57 /* ViewController.m */; };
 		8383EDB61F9D8CA5006BCC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDB41F9D8CA5006BCC57 /* Main.storyboard */; };
@@ -58,6 +59,8 @@
 		832FA9A11F9EF7650049A5FD /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		832FA9A21F9EF7650049A5FD /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		832FA9A51F9EFB080049A5FD /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		832FA9A71F9F18340049A5FD /* HeroFIghter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroFIghter.h; sourceTree = "<group>"; };
+		832FA9A81F9F18340049A5FD /* HeroFIghter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroFIghter.m; sourceTree = "<group>"; };
 		8383EDAB1F9D8CA5006BCC57 /* Fighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8383EDAE1F9D8CA5006BCC57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8383EDAF1F9D8CA5006BCC57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 			children = (
 				8383EDF41F9D9450006BCC57 /* Fighter.h */,
 				8383EDF51F9D9450006BCC57 /* Fighter.m */,
+				832FA9A71F9F18340049A5FD /* HeroFIghter.h */,
+				832FA9A81F9F18340049A5FD /* HeroFIghter.m */,
 			);
 			path = Fighters;
 			sourceTree = "<group>";
@@ -298,7 +303,7 @@
 				TargetAttributes = {
 					8383EDAA1F9D8CA5006BCC57 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					8383EDC21F9D8CA5006BCC57 = {
 						CreatedOnToolsVersion = 9.0;
@@ -385,6 +390,7 @@
 				8383EE061F9DF9A7006BCC57 /* GameScene.m in Sources */,
 				8383EDBE1F9D8CA5006BCC57 /* main.m in Sources */,
 				8383EDF91F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.m in Sources */,
+				832FA9A91F9F18340049A5FD /* HeroFIghter.m in Sources */,
 				8383EDB01F9D8CA5006BCC57 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,12 +554,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X585696T4B;
 				GCC_PREFIX_HEADER = "/Users/shiwen/Desktop/文件整理/My/Spritekit/Fighter/FighterTests/PrefixHeader.pch";
 				INFOPLIST_FILE = Fighter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShiWenChen.com.Fighter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "34779f32-976c-48a9-8576-55b1d8bc4e7b";
+				PROVISIONING_PROFILE_SPECIFIER = TestApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -562,12 +571,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X585696T4B;
 				GCC_PREFIX_HEADER = "/Users/shiwen/Desktop/文件整理/My/Spritekit/Fighter/FighterTests/PrefixHeader.pch";
 				INFOPLIST_FILE = Fighter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShiWenChen.com.Fighter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "34779f32-976c-48a9-8576-55b1d8bc4e7b";
+				PROVISIONING_PROFILE_SPECIFIER = TestApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
