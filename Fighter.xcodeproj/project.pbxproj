@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832FA9A01F9EF20A0049A5FD /* PrefixHeader.pch in Sources */ = {isa = PBXBuildFile; fileRef = 832FA99F1F9EF16C0049A5FD /* PrefixHeader.pch */; };
+		832FA9A31F9EF7700049A5FD /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A11F9EF7650049A5FD /* pause.png */; };
+		832FA9A41F9EF7700049A5FD /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A21F9EF7650049A5FD /* start.png */; };
+		832FA9A61F9EFB0F0049A5FD /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A51F9EFB080049A5FD /* stop.png */; };
 		8383EDB01F9D8CA5006BCC57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDAF1F9D8CA5006BCC57 /* AppDelegate.m */; };
 		8383EDB31F9D8CA5006BCC57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDB21F9D8CA5006BCC57 /* ViewController.m */; };
 		8383EDB61F9D8CA5006BCC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDB41F9D8CA5006BCC57 /* Main.storyboard */; };
@@ -15,6 +19,21 @@
 		8383EDBE1F9D8CA5006BCC57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDBD1F9D8CA5006BCC57 /* main.m */; };
 		8383EDC81F9D8CA5006BCC57 /* FighterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDC71F9D8CA5006BCC57 /* FighterTests.m */; };
 		8383EDD31F9D8CA5006BCC57 /* FighterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDD21F9D8CA5006BCC57 /* FighterUITests.m */; };
+		8383EDEA1F9D8DEC006BCC57 /* enemy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE11F9D8DDC006BCC57 /* enemy@2x.png */; };
+		8383EDEB1F9D8DEC006BCC57 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE21F9D8DDC006BCC57 /* logo@2x.png */; };
+		8383EDEC1F9D8DEC006BCC57 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE31F9D8DDC006BCC57 /* spark.png */; };
+		8383EDED1F9D8DEC006BCC57 /* spitfire@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE41F9D8DDC006BCC57 /* spitfire@2x.png */; };
+		8383EDEE1F9D8DEC006BCC57 /* CloudParticleEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE61F9D8DDC006BCC57 /* CloudParticleEmitter.sks */; };
+		8383EDEF1F9D8DEC006BCC57 /* DamageSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE71F9D8DDC006BCC57 /* DamageSmoke.sks */; };
+		8383EDF01F9D8DEC006BCC57 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE81F9D8DDC006BCC57 /* Explosion.sks */; };
+		8383EDF11F9D8DEC006BCC57 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE91F9D8DDC006BCC57 /* Fire.sks */; };
+		8383EDF61F9D9450006BCC57 /* Fighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDF51F9D9450006BCC57 /* Fighter.m */; };
+		8383EDF91F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDF81F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.m */; };
+		8383EDFD1F9DE847006BCC57 /* StarScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDFC1F9DE847006BCC57 /* StarScene.m */; };
+		8383EE011F9DF791006BCC57 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDFF1F9DF77D006BCC57 /* enemy.png */; };
+		8383EE021F9DF791006BCC57 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8383EE001F9DF77D006BCC57 /* logo.png */; };
+		8383EE031F9DF791006BCC57 /* spitfire.png in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDFE1F9DF77D006BCC57 /* spitfire.png */; };
+		8383EE061F9DF9A7006BCC57 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EE051F9DF9A7006BCC57 /* GameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		832FA99F1F9EF16C0049A5FD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		832FA9A11F9EF7650049A5FD /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		832FA9A21F9EF7650049A5FD /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		832FA9A51F9EFB080049A5FD /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		8383EDAB1F9D8CA5006BCC57 /* Fighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8383EDAE1F9D8CA5006BCC57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8383EDAF1F9D8CA5006BCC57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +74,25 @@
 		8383EDCE1F9D8CA5006BCC57 /* FighterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FighterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8383EDD21F9D8CA5006BCC57 /* FighterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FighterUITests.m; sourceTree = "<group>"; };
 		8383EDD41F9D8CA5006BCC57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8383EDE11F9D8DDC006BCC57 /* enemy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "enemy@2x.png"; sourceTree = "<group>"; };
+		8383EDE21F9D8DDC006BCC57 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		8383EDE31F9D8DDC006BCC57 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		8383EDE41F9D8DDC006BCC57 /* spitfire@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spitfire@2x.png"; sourceTree = "<group>"; };
+		8383EDE61F9D8DDC006BCC57 /* CloudParticleEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CloudParticleEmitter.sks; sourceTree = "<group>"; };
+		8383EDE71F9D8DDC006BCC57 /* DamageSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DamageSmoke.sks; sourceTree = "<group>"; };
+		8383EDE81F9D8DDC006BCC57 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		8383EDE91F9D8DDC006BCC57 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
+		8383EDF41F9D9450006BCC57 /* Fighter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fighter.h; sourceTree = "<group>"; };
+		8383EDF51F9D9450006BCC57 /* Fighter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fighter.m; sourceTree = "<group>"; };
+		8383EDF71F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+MyUtilities.h"; sourceTree = "<group>"; };
+		8383EDF81F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKEmitterNode+MyUtilities.m"; sourceTree = "<group>"; };
+		8383EDFB1F9DE847006BCC57 /* StarScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarScene.h; sourceTree = "<group>"; };
+		8383EDFC1F9DE847006BCC57 /* StarScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarScene.m; sourceTree = "<group>"; };
+		8383EDFE1F9DF77D006BCC57 /* spitfire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spitfire.png; sourceTree = "<group>"; };
+		8383EDFF1F9DF77D006BCC57 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
+		8383EE001F9DF77D006BCC57 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		8383EE041F9DF9A7006BCC57 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		8383EE051F9DF9A7006BCC57 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +143,8 @@
 		8383EDAD1F9D8CA5006BCC57 /* Fighter */ = {
 			isa = PBXGroup;
 			children = (
+				8383EDFA1F9DE7E4006BCC57 /* Scene */,
+				8383EDF31F9D8E18006BCC57 /* Fighters */,
 				8383EDAE1F9D8CA5006BCC57 /* AppDelegate.h */,
 				8383EDAF1F9D8CA5006BCC57 /* AppDelegate.m */,
 				8383EDB11F9D8CA5006BCC57 /* ViewController.h */,
@@ -110,6 +154,8 @@
 				8383EDB91F9D8CA5006BCC57 /* LaunchScreen.storyboard */,
 				8383EDBC1F9D8CA5006BCC57 /* Info.plist */,
 				8383EDBD1F9D8CA5006BCC57 /* main.m */,
+				8383EDF71F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.h */,
+				8383EDF81F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.m */,
 			);
 			path = Fighter;
 			sourceTree = "<group>";
@@ -117,6 +163,9 @@
 		8383EDC61F9D8CA5006BCC57 /* FighterTests */ = {
 			isa = PBXGroup;
 			children = (
+				832FA99F1F9EF16C0049A5FD /* PrefixHeader.pch */,
+				8383EDE01F9D8DDC006BCC57 /* Images */,
+				8383EDE51F9D8DDC006BCC57 /* ParticleEmitters */,
 				8383EDC71F9D8CA5006BCC57 /* FighterTests.m */,
 				8383EDC91F9D8CA5006BCC57 /* Info.plist */,
 			);
@@ -130,6 +179,56 @@
 				8383EDD41F9D8CA5006BCC57 /* Info.plist */,
 			);
 			path = FighterUITests;
+			sourceTree = "<group>";
+		};
+		8383EDE01F9D8DDC006BCC57 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				832FA9A11F9EF7650049A5FD /* pause.png */,
+				832FA9A51F9EFB080049A5FD /* stop.png */,
+				832FA9A21F9EF7650049A5FD /* start.png */,
+				8383EDE11F9D8DDC006BCC57 /* enemy@2x.png */,
+				8383EDFF1F9DF77D006BCC57 /* enemy.png */,
+				8383EE001F9DF77D006BCC57 /* logo.png */,
+				8383EDFE1F9DF77D006BCC57 /* spitfire.png */,
+				8383EDE21F9D8DDC006BCC57 /* logo@2x.png */,
+				8383EDE31F9D8DDC006BCC57 /* spark.png */,
+				8383EDE41F9D8DDC006BCC57 /* spitfire@2x.png */,
+			);
+			name = Images;
+			path = Fighter/Images;
+			sourceTree = SOURCE_ROOT;
+		};
+		8383EDE51F9D8DDC006BCC57 /* ParticleEmitters */ = {
+			isa = PBXGroup;
+			children = (
+				8383EDE61F9D8DDC006BCC57 /* CloudParticleEmitter.sks */,
+				8383EDE71F9D8DDC006BCC57 /* DamageSmoke.sks */,
+				8383EDE81F9D8DDC006BCC57 /* Explosion.sks */,
+				8383EDE91F9D8DDC006BCC57 /* Fire.sks */,
+			);
+			name = ParticleEmitters;
+			path = Fighter/ParticleEmitters;
+			sourceTree = SOURCE_ROOT;
+		};
+		8383EDF31F9D8E18006BCC57 /* Fighters */ = {
+			isa = PBXGroup;
+			children = (
+				8383EDF41F9D9450006BCC57 /* Fighter.h */,
+				8383EDF51F9D9450006BCC57 /* Fighter.m */,
+			);
+			path = Fighters;
+			sourceTree = "<group>";
+		};
+		8383EDFA1F9DE7E4006BCC57 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				8383EDFB1F9DE847006BCC57 /* StarScene.h */,
+				8383EDFC1F9DE847006BCC57 /* StarScene.m */,
+				8383EE041F9DF9A7006BCC57 /* GameScene.h */,
+				8383EE051F9DF9A7006BCC57 /* GameScene.m */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +337,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832FA9A61F9EFB0F0049A5FD /* stop.png in Resources */,
+				832FA9A31F9EF7700049A5FD /* pause.png in Resources */,
+				832FA9A41F9EF7700049A5FD /* start.png in Resources */,
+				8383EE011F9DF791006BCC57 /* enemy.png in Resources */,
+				8383EE021F9DF791006BCC57 /* logo.png in Resources */,
+				8383EE031F9DF791006BCC57 /* spitfire.png in Resources */,
+				8383EDEA1F9D8DEC006BCC57 /* enemy@2x.png in Resources */,
+				8383EDEB1F9D8DEC006BCC57 /* logo@2x.png in Resources */,
+				8383EDEC1F9D8DEC006BCC57 /* spark.png in Resources */,
+				8383EDED1F9D8DEC006BCC57 /* spitfire@2x.png in Resources */,
+				8383EDEE1F9D8DEC006BCC57 /* CloudParticleEmitter.sks in Resources */,
+				8383EDEF1F9D8DEC006BCC57 /* DamageSmoke.sks in Resources */,
+				8383EDF01F9D8DEC006BCC57 /* Explosion.sks in Resources */,
+				8383EDF11F9D8DEC006BCC57 /* Fire.sks in Resources */,
 				8383EDBB1F9D8CA5006BCC57 /* LaunchScreen.storyboard in Resources */,
 				8383EDB81F9D8CA5006BCC57 /* Assets.xcassets in Resources */,
 				8383EDB61F9D8CA5006BCC57 /* Main.storyboard in Resources */,
@@ -265,8 +378,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				832FA9A01F9EF20A0049A5FD /* PrefixHeader.pch in Sources */,
 				8383EDB31F9D8CA5006BCC57 /* ViewController.m in Sources */,
+				8383EDF61F9D9450006BCC57 /* Fighter.m in Sources */,
+				8383EDFD1F9DE847006BCC57 /* StarScene.m in Sources */,
+				8383EE061F9DF9A7006BCC57 /* GameScene.m in Sources */,
 				8383EDBE1F9D8CA5006BCC57 /* main.m in Sources */,
+				8383EDF91F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.m in Sources */,
 				8383EDB01F9D8CA5006BCC57 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "/Users/shiwen/Desktop/文件整理/My/Spritekit/Fighter/FighterTests/PrefixHeader.pch";
 				INFOPLIST_FILE = Fighter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShiWenChen.com.Fighter;
@@ -444,6 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "/Users/shiwen/Desktop/文件整理/My/Spritekit/Fighter/FighterTests/PrefixHeader.pch";
 				INFOPLIST_FILE = Fighter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ShiWenChen.com.Fighter;

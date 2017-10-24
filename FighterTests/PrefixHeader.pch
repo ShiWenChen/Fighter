@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  Fighter
+//
+//  Created by ShiWen on 2017/10/24.
+//  Copyright © 2017年 ShiWen. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import <SpriteKit/SpriteKit.h>
+
+#import "SKEmitterNode+MyUtilities.h"
+
+#define WIDTH self.view.bounds.size.width
+#define HIGHT self.view.bounds.size.height
+
+
+
+#endif /* PrefixHeader_pch */
