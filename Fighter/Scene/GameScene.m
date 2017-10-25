@@ -7,6 +7,21 @@
 //
 
 #import "GameScene.h"
+#import "HeroFIghter.h"
+
+#import "HeroMissiles.h"
+
+@interface GameScene()
+@property (nonatomic ,strong) SKNode *fighterNode;
+@property (nonatomic , strong)HeroFIghter *heroFighter;
+@property (nonatomic,assign )float lastUpdate;
+@property (nonatomic,assign) NSTimeInterval lastUpdateTimeInterval;
+@property (nonatomic,assign) NSTimeInterval lastSpawnTimeInterval;
+@property (nonatomic,assign) double timeinterval;
+
+
+
+@end
 
 @implementation GameScene
 -(instancetype)initWithSize:(CGSize)size{
@@ -16,12 +31,91 @@
         ground.position = CGPointMake((self.frame.size.width / 2), (self.frame.size.height / 2));
         [self addChild:ground];
         //        粒子效果
-        SKEmitterNode *backGroud = [SKEmitterNode emitterNamed:@"CloudParticleEmitter"];
-        backGroud.position = CGPointMake(size.width/2, size.height/2);
-        [ground addChild:backGroud];
+        SKEmitterNode *backGroud1 = [SKEmitterNode emitterNamed:@"CloudParticleEmitter"];
+        backGroud1.position = CGPointMake(size.width/2, size.height/2+200);
+        [ground addChild:backGroud1];
+        
+//        再添加一个云，增加深度
+        SKEmitterNode *backGroud2 = [SKEmitterNode emitterNamed:@"CloudParticleEmitter"];
+        backGroud2.position = CGPointMake(size.width/2, size.height/2+200);
+        [ground addChild:backGroud2];
+        
+        
+        self.fighterNode = [SKNode node];
+        [self addChild:self.fighterNode];
+        
+//        英雄增加边框，使其不会飞出屏幕
+        NSLog(@"%f",WIDTH);
+        SKSpriteNode *heroBox = [SKSpriteNode spriteNodeWithColor:[SKColor clearColor] size:CGSizeMake(WIDTH - 5, HIGHT - 5)];
+        heroBox.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(5, 5, WIDTH - 5, HIGHT - 5)];
+        heroBox.physicsBody.categoryBitMask = heroBoundingBoxCategory;
+        heroBox.physicsBody.collisionBitMask = heroFighterCategory|heroMissileCategory|enemyMissleCategory|enemyFighterCategory;
+        heroBox.physicsBody.contactTestBitMask = heroFighterCategory;
+        heroBox.position = CGPointMake(WIDTH/2, HIGHT/2);
+        [self.fighterNode addChild:heroBox];
+        
+        [self.fighterNode addChild:self.heroFighter];
+        NSLog(@"%@",self.view);
+        
+        
         
     }
     return self;
 }
 
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = touches.anyObject;
+    CGPoint point = [touch locationInView:self.view];
+    self.heroFighter.position = CGPointMake(point.x, HIGHT - point.y);
+}
+-(HeroFIghter *)heroFighter{
+    if (!_heroFighter) {
+        _heroFighter = [[HeroFIghter alloc] init];
+        _heroFighter.position = CGPointMake(WIDTH/2, HIGHT/2);
+        
+    }
+    return _heroFighter;
+}
+-(void)update:(NSTimeInterval)currentTime{
+    //    让怪物在一定的时间间隔内生成
+    CFTimeInterval  timeSinceLast = currentTime - self.lastUpdateTimeInterval;
+    
+    if (timeSinceLast > 1) {
+        timeSinceLast = 1/60.0;
+    }
+    self.lastUpdateTimeInterval = currentTime;
+    
+    self.lastSpawnTimeInterval += timeSinceLast;
+    if (self.timeinterval < 0.0) {
+        self.timeinterval = 0;
+    }
+
+    if (self.lastSpawnTimeInterval > 0.2) {
+        self.lastSpawnTimeInterval = 0;
+        [self addMissiles];
+    }
+    
+}
+
+/**
+添加炮弹
+ */
+-(void)addMissiles{
+    if (!self.scene.isPaused) {
+        HeroMissiles *missle1 = [[HeroMissiles alloc]init];
+        missle1.position = CGPointMake(-17, 20);
+        [self.heroFighter addChild:missle1];
+        SKAction *moveAction1 = [SKAction moveTo:CGPointMake(-17, 1000) duration:1];
+        SKAction *removeAction1 = [SKAction removeFromParent];
+        SKAction *sequence1 = [SKAction sequence:@[moveAction1,removeAction1]];
+        [missle1 runAction:sequence1];
+        HeroMissiles *missle2 = [[HeroMissiles alloc]init];
+        missle2.position = CGPointMake(17, 20);
+        [self.heroFighter addChild:missle2];
+        SKAction *moveAction2 = [SKAction moveTo:CGPointMake(17, 1000) duration:1];
+        SKAction *removeAction2 = [SKAction removeFromParent];
+        SKAction *sequence2 = [SKAction sequence:@[moveAction2,removeAction2]];
+        [missle2 runAction:sequence2];
+    }
+}
 @end

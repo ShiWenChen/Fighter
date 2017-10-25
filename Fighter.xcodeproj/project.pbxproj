@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831A7EA31FA0A216006B1907 /* bullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831A7EA11FA0A216006B1907 /* bullet@2x.png */; };
+		831A7EA41FA0A216006B1907 /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 831A7EA21FA0A216006B1907 /* bullet.png */; };
 		832FA9A01F9EF20A0049A5FD /* PrefixHeader.pch in Sources */ = {isa = PBXBuildFile; fileRef = 832FA99F1F9EF16C0049A5FD /* PrefixHeader.pch */; };
 		832FA9A31F9EF7700049A5FD /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A11F9EF7650049A5FD /* pause.png */; };
 		832FA9A41F9EF7700049A5FD /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A21F9EF7650049A5FD /* start.png */; };
 		832FA9A61F9EFB0F0049A5FD /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A51F9EFB080049A5FD /* stop.png */; };
 		832FA9A91F9F18340049A5FD /* HeroFIghter.m in Sources */ = {isa = PBXBuildFile; fileRef = 832FA9A81F9F18340049A5FD /* HeroFIghter.m */; };
+		83686BEA1F9F30180043D68F /* Missiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 83686BE91F9F30180043D68F /* Missiles.m */; };
+		83686BED1F9F333D0043D68F /* HeroMissiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 83686BEC1F9F333D0043D68F /* HeroMissiles.m */; };
+		83686BF01F9F44B30043D68F /* EnemyMissiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 83686BEF1F9F44B30043D68F /* EnemyMissiles.m */; };
 		8383EDB01F9D8CA5006BCC57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDAF1F9D8CA5006BCC57 /* AppDelegate.m */; };
 		8383EDB31F9D8CA5006BCC57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDB21F9D8CA5006BCC57 /* ViewController.m */; };
 		8383EDB61F9D8CA5006BCC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDB41F9D8CA5006BCC57 /* Main.storyboard */; };
@@ -28,7 +33,6 @@
 		8383EDEF1F9D8DEC006BCC57 /* DamageSmoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE71F9D8DDC006BCC57 /* DamageSmoke.sks */; };
 		8383EDF01F9D8DEC006BCC57 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE81F9D8DDC006BCC57 /* Explosion.sks */; };
 		8383EDF11F9D8DEC006BCC57 /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDE91F9D8DDC006BCC57 /* Fire.sks */; };
-		8383EDF61F9D9450006BCC57 /* Fighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDF51F9D9450006BCC57 /* Fighter.m */; };
 		8383EDF91F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDF81F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.m */; };
 		8383EDFD1F9DE847006BCC57 /* StarScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8383EDFC1F9DE847006BCC57 /* StarScene.m */; };
 		8383EE011F9DF791006BCC57 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 8383EDFF1F9DF77D006BCC57 /* enemy.png */; };
@@ -55,12 +59,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		831A7EA11FA0A216006B1907 /* bullet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bullet@2x.png"; sourceTree = "<group>"; };
+		831A7EA21FA0A216006B1907 /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
 		832FA99F1F9EF16C0049A5FD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		832FA9A11F9EF7650049A5FD /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		832FA9A21F9EF7650049A5FD /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		832FA9A51F9EFB080049A5FD /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		832FA9A71F9F18340049A5FD /* HeroFIghter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroFIghter.h; sourceTree = "<group>"; };
 		832FA9A81F9F18340049A5FD /* HeroFIghter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroFIghter.m; sourceTree = "<group>"; };
+		83686BE81F9F30180043D68F /* Missiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Missiles.h; sourceTree = "<group>"; };
+		83686BE91F9F30180043D68F /* Missiles.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Missiles.m; sourceTree = "<group>"; };
+		83686BEB1F9F333D0043D68F /* HeroMissiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroMissiles.h; sourceTree = "<group>"; };
+		83686BEC1F9F333D0043D68F /* HeroMissiles.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroMissiles.m; sourceTree = "<group>"; };
+		83686BEE1F9F44B30043D68F /* EnemyMissiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemyMissiles.h; sourceTree = "<group>"; };
+		83686BEF1F9F44B30043D68F /* EnemyMissiles.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnemyMissiles.m; sourceTree = "<group>"; };
 		8383EDAB1F9D8CA5006BCC57 /* Fighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8383EDAE1F9D8CA5006BCC57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8383EDAF1F9D8CA5006BCC57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -85,8 +97,6 @@
 		8383EDE71F9D8DDC006BCC57 /* DamageSmoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DamageSmoke.sks; sourceTree = "<group>"; };
 		8383EDE81F9D8DDC006BCC57 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		8383EDE91F9D8DDC006BCC57 /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
-		8383EDF41F9D9450006BCC57 /* Fighter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fighter.h; sourceTree = "<group>"; };
-		8383EDF51F9D9450006BCC57 /* Fighter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fighter.m; sourceTree = "<group>"; };
 		8383EDF71F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+MyUtilities.h"; sourceTree = "<group>"; };
 		8383EDF81F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKEmitterNode+MyUtilities.m"; sourceTree = "<group>"; };
 		8383EDFB1F9DE847006BCC57 /* StarScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarScene.h; sourceTree = "<group>"; };
@@ -123,6 +133,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83686BE71F9F2FF80043D68F /* Missiles */ = {
+			isa = PBXGroup;
+			children = (
+				83686BE81F9F30180043D68F /* Missiles.h */,
+				83686BE91F9F30180043D68F /* Missiles.m */,
+				83686BEB1F9F333D0043D68F /* HeroMissiles.h */,
+				83686BEC1F9F333D0043D68F /* HeroMissiles.m */,
+				83686BEE1F9F44B30043D68F /* EnemyMissiles.h */,
+				83686BEF1F9F44B30043D68F /* EnemyMissiles.m */,
+			);
+			path = Missiles;
+			sourceTree = "<group>";
+		};
 		8383EDA21F9D8CA5006BCC57 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +169,7 @@
 		8383EDAD1F9D8CA5006BCC57 /* Fighter */ = {
 			isa = PBXGroup;
 			children = (
+				83686BE71F9F2FF80043D68F /* Missiles */,
 				8383EDFA1F9DE7E4006BCC57 /* Scene */,
 				8383EDF31F9D8E18006BCC57 /* Fighters */,
 				8383EDAE1F9D8CA5006BCC57 /* AppDelegate.h */,
@@ -187,6 +211,8 @@
 		8383EDE01F9D8DDC006BCC57 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				831A7EA21FA0A216006B1907 /* bullet.png */,
+				831A7EA11FA0A216006B1907 /* bullet@2x.png */,
 				832FA9A11F9EF7650049A5FD /* pause.png */,
 				832FA9A51F9EFB080049A5FD /* stop.png */,
 				832FA9A21F9EF7650049A5FD /* start.png */,
@@ -217,8 +243,6 @@
 		8383EDF31F9D8E18006BCC57 /* Fighters */ = {
 			isa = PBXGroup;
 			children = (
-				8383EDF41F9D9450006BCC57 /* Fighter.h */,
-				8383EDF51F9D9450006BCC57 /* Fighter.m */,
 				832FA9A71F9F18340049A5FD /* HeroFIghter.h */,
 				832FA9A81F9F18340049A5FD /* HeroFIghter.m */,
 			);
@@ -342,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831A7EA31FA0A216006B1907 /* bullet@2x.png in Resources */,
 				832FA9A61F9EFB0F0049A5FD /* stop.png in Resources */,
 				832FA9A31F9EF7700049A5FD /* pause.png in Resources */,
 				832FA9A41F9EF7700049A5FD /* start.png in Resources */,
@@ -354,6 +379,7 @@
 				8383EDED1F9D8DEC006BCC57 /* spitfire@2x.png in Resources */,
 				8383EDEE1F9D8DEC006BCC57 /* CloudParticleEmitter.sks in Resources */,
 				8383EDEF1F9D8DEC006BCC57 /* DamageSmoke.sks in Resources */,
+				831A7EA41FA0A216006B1907 /* bullet.png in Resources */,
 				8383EDF01F9D8DEC006BCC57 /* Explosion.sks in Resources */,
 				8383EDF11F9D8DEC006BCC57 /* Fire.sks in Resources */,
 				8383EDBB1F9D8CA5006BCC57 /* LaunchScreen.storyboard in Resources */,
@@ -385,12 +411,14 @@
 			files = (
 				832FA9A01F9EF20A0049A5FD /* PrefixHeader.pch in Sources */,
 				8383EDB31F9D8CA5006BCC57 /* ViewController.m in Sources */,
-				8383EDF61F9D9450006BCC57 /* Fighter.m in Sources */,
 				8383EDFD1F9DE847006BCC57 /* StarScene.m in Sources */,
 				8383EE061F9DF9A7006BCC57 /* GameScene.m in Sources */,
+				83686BF01F9F44B30043D68F /* EnemyMissiles.m in Sources */,
 				8383EDBE1F9D8CA5006BCC57 /* main.m in Sources */,
+				83686BED1F9F333D0043D68F /* HeroMissiles.m in Sources */,
 				8383EDF91F9DE4EA006BCC57 /* SKEmitterNode+MyUtilities.m in Sources */,
 				832FA9A91F9F18340049A5FD /* HeroFIghter.m in Sources */,
+				83686BEA1F9F30180043D68F /* Missiles.m in Sources */,
 				8383EDB01F9D8CA5006BCC57 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -120,12 +120,13 @@
         self.isStart = NO;
         NSLog(@"开始");
         [self.btnPause setBackgroundImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
+        self.skView.paused = NO;
     }else{
         self.isStart = YES;
         NSLog(@"暂停");
         [self.btnPause setBackgroundImage:[UIImage imageNamed:@"start.png"] forState:UIControlStateNormal];
+        self.skView.paused = YES;
     }
-    
     
 }
 -(void)stopTouch{
