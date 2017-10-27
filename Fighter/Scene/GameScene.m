@@ -8,8 +8,14 @@
 
 #import "GameScene.h"
 #import "HeroFIghter.h"
-
+#import "EnemesFighter.h"
 #import "HeroMissiles.h"
+
+typedef enum : NSUInteger {
+    EnemesOneFly = 1,
+    EnemesTriangleFly=2,
+    EnemesDiagonal=3,
+} EnemesType;
 
 @interface GameScene()
 @property (nonatomic ,strong) SKNode *fighterNode;
@@ -56,6 +62,7 @@
         
         [self.fighterNode addChild:self.heroFighter];
         NSLog(@"%@",self.view);
+        [self addEmemesWithType:EnemesOneFly];
         
         
         
@@ -118,4 +125,41 @@
         [missle2 runAction:sequence2];
     }
 }
+//添加敌机
+-(void)addEmemesWithType:(EnemesType)type{
+    if (type == EnemesOneFly) {
+        NSLog(@"横着一字排开");
+        for (int i = 0; i<5; i++) {
+            EnemesFighter *enemsfighter = [[EnemesFighter alloc] init];
+            enemsfighter.position = CGPointMake(20+ enemsfighter.size.width/2 +(15 + enemsfighter.size.width) * i, HIGHT - enemsfighter.size.height/2);
+            SKAction *rotate = [SKAction rotateToAngle:M_PI duration:0];
+            SKAction *move = [SKAction moveTo:CGPointMake(enemsfighter.position.x, -1000) duration:10];
+            SKAction *remove = [SKAction removeFromParent];
+            
+            [enemsfighter runAction:[SKAction sequence:@[rotate,move,remove]]];
+            
+            [self addChild:enemsfighter];
+        }
+        
+    }
+    if (type == EnemesTriangleFly) {
+        NSLog(@"三角状飞来");
+    }
+    if (type == EnemesDiagonal) {
+        NSLog(@"对角线飞来");
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
 @end

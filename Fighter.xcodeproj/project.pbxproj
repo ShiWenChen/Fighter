@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		831A7EA31FA0A216006B1907 /* bullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831A7EA11FA0A216006B1907 /* bullet@2x.png */; };
 		831A7EA41FA0A216006B1907 /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 831A7EA21FA0A216006B1907 /* bullet.png */; };
+		83268F891FA3297900488AEC /* EnemesFighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83268F881FA3297900488AEC /* EnemesFighter.m */; };
 		832FA9A01F9EF20A0049A5FD /* PrefixHeader.pch in Sources */ = {isa = PBXBuildFile; fileRef = 832FA99F1F9EF16C0049A5FD /* PrefixHeader.pch */; };
 		832FA9A31F9EF7700049A5FD /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A11F9EF7650049A5FD /* pause.png */; };
 		832FA9A41F9EF7700049A5FD /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A21F9EF7650049A5FD /* start.png */; };
@@ -61,6 +62,8 @@
 /* Begin PBXFileReference section */
 		831A7EA11FA0A216006B1907 /* bullet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bullet@2x.png"; sourceTree = "<group>"; };
 		831A7EA21FA0A216006B1907 /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		83268F871FA3297900488AEC /* EnemesFighter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemesFighter.h; sourceTree = "<group>"; };
+		83268F881FA3297900488AEC /* EnemesFighter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnemesFighter.m; sourceTree = "<group>"; };
 		832FA99F1F9EF16C0049A5FD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		832FA9A11F9EF7650049A5FD /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		832FA9A21F9EF7650049A5FD /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 			children = (
 				832FA9A71F9F18340049A5FD /* HeroFIghter.h */,
 				832FA9A81F9F18340049A5FD /* HeroFIghter.m */,
+				83268F871FA3297900488AEC /* EnemesFighter.h */,
+				83268F881FA3297900488AEC /* EnemesFighter.m */,
 			);
 			path = Fighters;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83268F891FA3297900488AEC /* EnemesFighter.m in Sources */,
 				832FA9A01F9EF20A0049A5FD /* PrefixHeader.pch in Sources */,
 				8383EDB31F9D8CA5006BCC57 /* ViewController.m in Sources */,
 				8383EDFD1F9DE847006BCC57 /* StarScene.m in Sources */,

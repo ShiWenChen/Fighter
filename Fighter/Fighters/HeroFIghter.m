@@ -24,7 +24,7 @@
         self.physicsBody.contactTestBitMask = enemyFighterCategory | enemyMissleCategory |heroBoundingBoxCategory;
         self.physicsBody.mass = 50;
         self.physicsBody.allowsRotation = NO;
-        self.size = CGSizeMake(60, 60);
+//        self.size = CGSizeMake(60, 60);
         
         
         _somkeEmitter = [SKEmitterNode emitterNamed:@"DamageSmoke"];
