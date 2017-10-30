@@ -20,9 +20,7 @@ typedef enum : NSUInteger {
 } EnemesType;
 
 @interface GameScene()
-{
-    NSTimer *_addEnemesTimer;
-}
+
 @property (nonatomic ,strong) SKNode *fighterNode;
 @property (nonatomic , strong)HeroFIghter *heroFighter;
 @property (nonatomic,assign )float lastUpdate;
@@ -70,8 +68,10 @@ typedef enum : NSUInteger {
         NSLog(@"%@",self.view);
         [self addEmemesWithType:EnemesTriangleFly];
         _addEnemesTimer = [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//            停止timer
             int type = arc4random()%4;
             [self addEmemesWithType:type];
+            
         }];
         
         

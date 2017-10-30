@@ -18,7 +18,7 @@
  */
 @property (nonatomic , strong)UIButton * btnStar;
 
-
+@property (nonatomic,strong) GameScene *geameScene;
 
 /**
  logo
@@ -81,14 +81,21 @@
     return _logoImage;
 }
 -(void)startTouch{
-    GameScene *geameScene = [[GameScene alloc] initWithSize:self.view.frame.size];
-    [self.skView presentScene:geameScene transition:[SKTransition doorsOpenHorizontalWithDuration:1]];
+    [self.skView presentScene:self.geameScene transition:[SKTransition doorsOpenHorizontalWithDuration:1]];
     [UIView animateWithDuration:1 animations:^{
         self.btnStar.alpha = 0;
         self.logoImage.alpha = 0;
         self.btnPause.alpha = 1;
         self.btnStop.alpha = 1.0;
     }];
+}
+-(GameScene *)geameScene{
+    if (!_geameScene) {
+        _geameScene = [[GameScene alloc] initWithSize:self.view.frame.size];
+
+    }
+    return _geameScene;
+    
 }
 -(UIButton *)btnPause{
     if (!_btnPause) {
@@ -121,17 +128,22 @@
         NSLog(@"开始");
         [self.btnPause setBackgroundImage:[UIImage imageNamed:@"pause.png"] forState:UIControlStateNormal];
         self.skView.paused = NO;
+        self.geameScene.addEnemesTimer.fireDate = [NSDate distantPast];
     }else{
         self.isStart = YES;
         NSLog(@"暂停");
         [self.btnPause setBackgroundImage:[UIImage imageNamed:@"start.png"] forState:UIControlStateNormal];
         self.skView.paused = YES;
+        self.geameScene.addEnemesTimer.fireDate = [NSDate distantFuture];
+
     }
     
 }
 -(void)stopTouch{
     StarScene *starScene = [[StarScene alloc] initWithSize:self.view.frame.size];
     [self.skView presentScene:starScene transition:[SKTransition doorsCloseHorizontalWithDuration:1]];
+    [self.geameScene.addEnemesTimer invalidate];
+    self.geameScene.addEnemesTimer = nil;
     [UIView animateWithDuration:1 animations:^{
         
         self.btnPause.alpha = 0.0;

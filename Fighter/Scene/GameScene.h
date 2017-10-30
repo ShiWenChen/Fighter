@@ -9,5 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface GameScene : SKScene
-
+/**
+ *  敌机
+ */
+@property (nonatomic , strong)NSTimer *addEnemesTimer;
 @end
