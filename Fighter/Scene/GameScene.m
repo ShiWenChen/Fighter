@@ -10,20 +10,26 @@
 #import "HeroFIghter.h"
 #import "EnemesFighter.h"
 #import "HeroMissiles.h"
+#import "EnemyMissiles.h"
 
 typedef enum : NSUInteger {
     EnemesOneFly = 1,
     EnemesTriangleFly=2,
-    EnemesDiagonal=3,
+    EnemesPositiveDiagonal=3,
+    EnemesDiagonalDiagonal = 4
 } EnemesType;
 
 @interface GameScene()
+{
+    NSTimer *_addEnemesTimer;
+}
 @property (nonatomic ,strong) SKNode *fighterNode;
 @property (nonatomic , strong)HeroFIghter *heroFighter;
 @property (nonatomic,assign )float lastUpdate;
 @property (nonatomic,assign) NSTimeInterval lastUpdateTimeInterval;
 @property (nonatomic,assign) NSTimeInterval lastSpawnTimeInterval;
 @property (nonatomic,assign) double timeinterval;
+
 
 
 
@@ -62,8 +68,11 @@ typedef enum : NSUInteger {
         
         [self.fighterNode addChild:self.heroFighter];
         NSLog(@"%@",self.view);
-        [self addEmemesWithType:EnemesOneFly];
-        
+        [self addEmemesWithType:EnemesTriangleFly];
+        _addEnemesTimer = [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+            int type = arc4random()%4;
+            [self addEmemesWithType:type];
+        }];
         
         
     }
@@ -84,7 +93,7 @@ typedef enum : NSUInteger {
     return _heroFighter;
 }
 -(void)update:(NSTimeInterval)currentTime{
-    //    让怪物在一定的时间间隔内生成
+    //    让物体在一定的时间间隔内生成
     CFTimeInterval  timeSinceLast = currentTime - self.lastUpdateTimeInterval;
     
     if (timeSinceLast > 1) {
@@ -101,7 +110,6 @@ typedef enum : NSUInteger {
         self.lastSpawnTimeInterval = 0;
         [self addMissiles];
     }
-    
 }
 
 /**
@@ -127,33 +135,100 @@ typedef enum : NSUInteger {
 }
 //添加敌机
 -(void)addEmemesWithType:(EnemesType)type{
+    //        enemsfighter宽度为60
+
+    float interval = (WIDTH - 60 * 5)/6;
+
     if (type == EnemesOneFly) {
         NSLog(@"横着一字排开");
         for (int i = 0; i<5; i++) {
             EnemesFighter *enemsfighter = [[EnemesFighter alloc] init];
-            enemsfighter.position = CGPointMake(20+ enemsfighter.size.width/2 +(15 + enemsfighter.size.width) * i, HIGHT - enemsfighter.size.height/2);
-            SKAction *rotate = [SKAction rotateToAngle:M_PI duration:0];
-            SKAction *move = [SKAction moveTo:CGPointMake(enemsfighter.position.x, -1000) duration:10];
-            SKAction *remove = [SKAction removeFromParent];
             
-            [enemsfighter runAction:[SKAction sequence:@[rotate,move,remove]]];
-            
+            enemsfighter.position = CGPointMake(interval+enemsfighter.size.width/2 +(interval + enemsfighter.size.width) * i, HIGHT + enemsfighter.size.height/2);
+            [self action:enemsfighter];
+            [self addEnemesMissilesWith:enemsfighter];
+
             [self addChild:enemsfighter];
         }
         
     }
     if (type == EnemesTriangleFly) {
         NSLog(@"三角状飞来");
+//        enemsfighter高度为52
+        int fighterHigth = 52;
+        for (int i = 0; i<5; i++) {
+            EnemesFighter *enemsfighter = [[EnemesFighter alloc] init];
+            if (i<3) {
+                enemsfighter.position = CGPointMake(interval+enemsfighter.size.width/2 +(interval + enemsfighter.size.width) * i, HIGHT+5*fighterHigth  - (enemsfighter.size.height + fighterHigth)*i);
+
+            }
+            if (i == 3) {
+                enemsfighter.position = CGPointMake(interval+enemsfighter.size.width/2 +(interval + enemsfighter.size.width) * i, HIGHT+5*fighterHigth  - (enemsfighter.size.height + fighterHigth));
+
+            }
+            if (i == 4) {
+                enemsfighter.position = CGPointMake(interval+enemsfighter.size.width/2 +(interval + enemsfighter.size.width) * i, HIGHT+5*fighterHigth);
+                
+            }
+
+            [self action:enemsfighter];
+            [self addEnemesMissilesWith:enemsfighter];
+
+            [self addChild:enemsfighter];
+        }
     }
-    if (type == EnemesDiagonal) {
+    if (type == EnemesPositiveDiagonal) {
         NSLog(@"对角线飞来");
+        //        enemsfighter高度为52
+        int fighterHigth = 52;
+        for (int i = 0; i<5; i++) {
+            EnemesFighter *enemsfighter = [[EnemesFighter alloc] init];
+            enemsfighter.position = CGPointMake(interval+enemsfighter.size.width/2 +(interval + enemsfighter.size.width) * i, HIGHT+9*fighterHigth  - (enemsfighter.size.height + fighterHigth)*i);
+
+            [self action:enemsfighter];
+            [self addEnemesMissilesWith:enemsfighter];
+
+            [self addChild:enemsfighter];
+        }
     }
-    
-    
+    if (type == EnemesDiagonalDiagonal) {
+        int fighterHigth = 52;
+        for (int i = 0; i<5; i++) {
+            EnemesFighter *enemsfighter = [[EnemesFighter alloc] init];
+            enemsfighter.position = CGPointMake(interval+enemsfighter.size.width/2 +(interval + enemsfighter.size.width) * i, HIGHT+enemsfighter.size.height   + (enemsfighter.size.height + fighterHigth)*i);
+            
+            [self action:enemsfighter];
+            [self addEnemesMissilesWith:enemsfighter];
+            [self addChild:enemsfighter];
+        }
+    }
     
 }
 
+-(void)addEnemesMissilesWith:(EnemesFighter*)fight{
+    EnemyMissiles *missle1 = [[EnemyMissiles alloc]init];
+    missle1.position = CGPointMake(-17, 20);
+    [fight addChild:missle1];
+    SKAction *moveAction1 = [SKAction moveTo:CGPointMake(-17, 1000) duration:2];
+    SKAction *removeAction1 = [SKAction removeFromParent];
+    SKAction *sequence1 = [SKAction sequence:@[moveAction1,removeAction1]];
+    [missle1 runAction:sequence1];
+    EnemyMissiles *missle2 = [[EnemyMissiles alloc]init];
+    missle2.position = CGPointMake(17, 20);
+    [fight addChild:missle2];
+    SKAction *moveAction2 = [SKAction moveTo:CGPointMake(17, 1000) duration:2];
+    SKAction *removeAction2 = [SKAction removeFromParent];
+    SKAction *sequence2 = [SKAction sequence:@[moveAction2,removeAction2]];
+    [missle2 runAction:sequence2];
+}
 
+-(void)action:(SKSpriteNode *)node{
+    SKAction *rotate = [SKAction rotateToAngle:M_PI duration:0];
+    SKAction *move = [SKAction moveTo:CGPointMake(node.position.x, -1000) duration:10];
+    SKAction *remove = [SKAction removeFromParent];
+    
+    [node runAction:[SKAction sequence:@[rotate,move,remove]]];
+}
 
 
 

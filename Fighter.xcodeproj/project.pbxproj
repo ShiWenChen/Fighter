@@ -10,6 +10,10 @@
 		831A7EA31FA0A216006B1907 /* bullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831A7EA11FA0A216006B1907 /* bullet@2x.png */; };
 		831A7EA41FA0A216006B1907 /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 831A7EA21FA0A216006B1907 /* bullet.png */; };
 		83268F891FA3297900488AEC /* EnemesFighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 83268F881FA3297900488AEC /* EnemesFighter.m */; };
+		83268F8C1FA6E42F00488AEC /* enemiesBullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 83268F8A1FA6E42F00488AEC /* enemiesBullet.png */; };
+		83268F8D1FA6E42F00488AEC /* enemiesBullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 83268F8A1FA6E42F00488AEC /* enemiesBullet.png */; };
+		83268F8E1FA6E42F00488AEC /* enemiesBullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83268F8B1FA6E42F00488AEC /* enemiesBullet@2x.png */; };
+		83268F8F1FA6E42F00488AEC /* enemiesBullet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83268F8B1FA6E42F00488AEC /* enemiesBullet@2x.png */; };
 		832FA9A01F9EF20A0049A5FD /* PrefixHeader.pch in Sources */ = {isa = PBXBuildFile; fileRef = 832FA99F1F9EF16C0049A5FD /* PrefixHeader.pch */; };
 		832FA9A31F9EF7700049A5FD /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A11F9EF7650049A5FD /* pause.png */; };
 		832FA9A41F9EF7700049A5FD /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 832FA9A21F9EF7650049A5FD /* start.png */; };
@@ -64,6 +68,8 @@
 		831A7EA21FA0A216006B1907 /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
 		83268F871FA3297900488AEC /* EnemesFighter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnemesFighter.h; sourceTree = "<group>"; };
 		83268F881FA3297900488AEC /* EnemesFighter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnemesFighter.m; sourceTree = "<group>"; };
+		83268F8A1FA6E42F00488AEC /* enemiesBullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemiesBullet.png; sourceTree = "<group>"; };
+		83268F8B1FA6E42F00488AEC /* enemiesBullet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "enemiesBullet@2x.png"; sourceTree = "<group>"; };
 		832FA99F1F9EF16C0049A5FD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		832FA9A11F9EF7650049A5FD /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		832FA9A21F9EF7650049A5FD /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
@@ -214,6 +220,8 @@
 		8383EDE01F9D8DDC006BCC57 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				83268F8A1FA6E42F00488AEC /* enemiesBullet.png */,
+				83268F8B1FA6E42F00488AEC /* enemiesBullet@2x.png */,
 				831A7EA21FA0A216006B1907 /* bullet.png */,
 				831A7EA11FA0A216006B1907 /* bullet@2x.png */,
 				832FA9A11F9EF7650049A5FD /* pause.png */,
@@ -377,10 +385,12 @@
 				832FA9A41F9EF7700049A5FD /* start.png in Resources */,
 				8383EE011F9DF791006BCC57 /* enemy.png in Resources */,
 				8383EE021F9DF791006BCC57 /* logo.png in Resources */,
+				83268F8E1FA6E42F00488AEC /* enemiesBullet@2x.png in Resources */,
 				8383EE031F9DF791006BCC57 /* spitfire.png in Resources */,
 				8383EDEA1F9D8DEC006BCC57 /* enemy@2x.png in Resources */,
 				8383EDEB1F9D8DEC006BCC57 /* logo@2x.png in Resources */,
 				8383EDEC1F9D8DEC006BCC57 /* spark.png in Resources */,
+				83268F8C1FA6E42F00488AEC /* enemiesBullet.png in Resources */,
 				8383EDED1F9D8DEC006BCC57 /* spitfire@2x.png in Resources */,
 				8383EDEE1F9D8DEC006BCC57 /* CloudParticleEmitter.sks in Resources */,
 				8383EDEF1F9D8DEC006BCC57 /* DamageSmoke.sks in Resources */,
@@ -397,6 +407,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83268F8D1FA6E42F00488AEC /* enemiesBullet.png in Resources */,
+				83268F8F1FA6E42F00488AEC /* enemiesBullet@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,11 @@
 @implementation EnemyMissiles
 
 -(instancetype)init{
-    if (self = [super init]) {
+    if (self = [super initWithImageNamed:@"enemiesBullet.png"]) {
+        self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+        self.physicsBody.friction = 0;
+        self.physicsBody.usesPreciseCollisionDetection = YES;
+
         self.physicsBody.categoryBitMask = enemyMissleCategory;
         self.physicsBody.collisionBitMask = heroFighterCategory | heroBoundingBoxCategory;
         self.physicsBody.contactTestBitMask = heroMissileCategory |heroBoundingBoxCategory;
