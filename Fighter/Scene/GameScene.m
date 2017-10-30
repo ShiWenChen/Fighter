@@ -207,19 +207,12 @@ typedef enum : NSUInteger {
 
 -(void)addEnemesMissilesWith:(EnemesFighter*)fight{
     EnemyMissiles *missle1 = [[EnemyMissiles alloc]init];
-    missle1.position = CGPointMake(-17, 20);
+    missle1.position = CGPointMake(0, 20);
     [fight addChild:missle1];
-    SKAction *moveAction1 = [SKAction moveTo:CGPointMake(-17, 1000) duration:2];
+    SKAction *moveAction1 = [SKAction moveTo:CGPointMake(0, 1000) duration:2];
     SKAction *removeAction1 = [SKAction removeFromParent];
     SKAction *sequence1 = [SKAction sequence:@[moveAction1,removeAction1]];
     [missle1 runAction:sequence1];
-    EnemyMissiles *missle2 = [[EnemyMissiles alloc]init];
-    missle2.position = CGPointMake(17, 20);
-    [fight addChild:missle2];
-    SKAction *moveAction2 = [SKAction moveTo:CGPointMake(17, 1000) duration:2];
-    SKAction *removeAction2 = [SKAction removeFromParent];
-    SKAction *sequence2 = [SKAction sequence:@[moveAction2,removeAction2]];
-    [missle2 runAction:sequence2];
 }
 
 -(void)action:(SKSpriteNode *)node{
