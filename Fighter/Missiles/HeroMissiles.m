@@ -14,6 +14,7 @@
         self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
         self.physicsBody.friction = 0;
         self.physicsBody.usesPreciseCollisionDetection = YES;
+        
         self.physicsBody.categoryBitMask = heroMissileCategory;
         self.physicsBody.collisionBitMask = enemyFighterCategory | heroBoundingBoxCategory;
         self.physicsBody.contactTestBitMask = enemyFighterCategory | heroBoundingBoxCategory;

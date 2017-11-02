@@ -15,10 +15,12 @@
         self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
         self.physicsBody.friction = 0;
         self.physicsBody.usesPreciseCollisionDetection = YES;
-
+        
+        self.name = @"EnemyMissles";
         self.physicsBody.categoryBitMask = enemyMissleCategory;
         self.physicsBody.collisionBitMask = heroFighterCategory | heroBoundingBoxCategory;
-        self.physicsBody.contactTestBitMask = heroMissileCategory |heroBoundingBoxCategory;
+        self.physicsBody.contactTestBitMask = heroFighterCategory | heroBoundingBoxCategory;
+        self.physicsBody.mass = 0.01;
     }
     return self;
 }

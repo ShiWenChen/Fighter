@@ -19,7 +19,7 @@ typedef enum : NSUInteger {
     EnemesDiagonalDiagonal = 4
 } EnemesType;
 
-@interface GameScene()
+@interface GameScene()<SKPhysicsContactDelegate>
 
 @property (nonatomic ,strong) SKNode *fighterNode;
 @property (nonatomic , strong)HeroFIghter *heroFighter;
@@ -49,8 +49,7 @@ typedef enum : NSUInteger {
         SKEmitterNode *backGroud2 = [SKEmitterNode emitterNamed:@"CloudParticleEmitter"];
         backGroud2.position = CGPointMake(size.width/2, size.height/2+200);
         [ground addChild:backGroud2];
-        
-        
+        self.physicsWorld.contactDelegate = self;
         self.fighterNode = [SKNode node];
         [self addChild:self.fighterNode];
         
@@ -59,8 +58,7 @@ typedef enum : NSUInteger {
         SKSpriteNode *heroBox = [SKSpriteNode spriteNodeWithColor:[SKColor clearColor] size:CGSizeMake(WIDTH - 5, HIGHT - 5)];
         heroBox.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(5, 5, WIDTH - 5, HIGHT - 5)];
         heroBox.physicsBody.categoryBitMask = heroBoundingBoxCategory;
-        heroBox.physicsBody.collisionBitMask = heroFighterCategory|heroMissileCategory|enemyMissleCategory|enemyFighterCategory;
-        heroBox.physicsBody.contactTestBitMask = heroFighterCategory;
+        heroBox.physicsBody.collisionBitMask = heroFighterCategory;
         heroBox.position = CGPointMake(WIDTH/2, HIGHT/2);
         [self.fighterNode addChild:heroBox];
         
@@ -223,7 +221,18 @@ typedef enum : NSUInteger {
     [node runAction:[SKAction sequence:@[rotate,move,remove]]];
 }
 
-
+-(void)didBeginContact:(SKPhysicsContact *)contact{
+    NSLog(@"%@",contact.bodyB);
+    if((contact.bodyA.categoryBitMask == heroMissileCategory || contact.bodyB.categoryBitMask == heroMissileCategory)&&(contact.bodyA.categoryBitMask == enemyFighterCategory || contact.bodyB.categoryBitMask == enemyFighterCategory) ) {
+        SKNode *enemyMissle = contact.bodyA.categoryBitMask == enemyMissleCategory ? contact.bodyA.node : contact.bodyB.node;
+        NSLog(@"英雄机打到敌机");
+    }
+    if(contact.bodyA.categoryBitMask == enemyFighterCategory || contact.bodyB.categoryBitMask == enemyFighterCategory) {
+        SKNode *enemyBody = contact.bodyA.categoryBitMask == enemyFighterCategory ? contact.bodyA.node : contact.bodyB.node;
+        NSLog(@"敌机撞到了东西");
+    }
+    
+}
 
 
 

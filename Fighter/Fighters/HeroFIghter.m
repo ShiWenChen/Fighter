@@ -25,6 +25,9 @@
         self.physicsBody.mass = 50;
         self.physicsBody.allowsRotation = NO;
 //        self.size = CGSizeMake(60, 60);
+//        self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+        self.physicsBody.usesPreciseCollisionDetection = YES;
+//        [self addChild:fighterSprite];
         
         
         _somkeEmitter = [SKEmitterNode emitterNamed:@"DamageSmoke"];

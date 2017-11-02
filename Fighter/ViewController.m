@@ -63,10 +63,10 @@
         _btnStar.showsTouchWhenHighlighted = YES;
         [_btnStar addTarget:self action:@selector(startTouch) forControlEvents:UIControlEventTouchUpInside];
         _btnStar.titleLabel.font = [UIFont boldSystemFontOfSize:20];
-        _btnStar.frame = CGRectMake(0, 0, 100, 100);
+        _btnStar.frame = CGRectMake(0, 0, WIDTH/3, WIDTH/3);
         _btnStar.center = CGPointMake(WIDTH/2, HIGHT/2 + 200);
         _btnStar.layer.masksToBounds = YES;
-        _btnStar.layer.cornerRadius = 50;
+        _btnStar.layer.cornerRadius = WIDTH/3/2;
         _btnStar.backgroundColor = [UIColor colorWithRed:220.0/255.0 green:80.0/255.0 blue:115.0/255.0 alpha:1];
     }
     return _btnStar;
